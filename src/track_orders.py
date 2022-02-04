@@ -1,21 +1,33 @@
+from src.analyze_log import (
+    favorite,
+    never,
+    day_never,
+    get_day,
+)
+from typing import Counter
+
+
 class TrackOrders:
+    def __init__(self):
+        self.orders = []
+
     def __len__(self):
-        pass
+        return len(self.orders)
 
     def add_new_order(self, costumer, order, day):
-        pass
+        self.orders.append((costumer, order, day))
 
     def get_most_ordered_dish_per_costumer(self, costumer):
-        pass
+        return favorite(costumer, self.orders)
 
-    def get_never_ordered_per_costumer(self, costumer):
-        pass
+    def get_nevered_per_costumer(self, costumer):
+        return never(costumer, self.orders)
 
     def get_days_never_visited_per_costumer(self, costumer):
-        pass
+        return day_never(costumer, self.orders)
 
     def get_busiest_day(self):
-        pass
+        return Counter(get_day(self.orders)).most_common(1)[0][0]
 
     def get_least_busy_day(self):
-        pass
+        return Counter(get_day(self.orders)).most_common()[-1][0]
