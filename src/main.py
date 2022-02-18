@@ -33,3 +33,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Agradecimentos a duas pessoas que me ajudaram na realização deste projeto.
+# Gabriel Essênio e Emerson Saturnino, muito obrigado por terem me ajudado
+# e compartilhado suas ideias comigo!
+# PR Gabriel: https://github.com/tryber/sd-010-b-restaurant-orders/pull/4
+# PR Emerson: https://github.com/tryber/sd-010-b-restaurant-orders/pull/37
